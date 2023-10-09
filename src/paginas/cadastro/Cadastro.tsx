@@ -41,6 +41,7 @@ function Cadastro() {
   }
 
   function atualizarEstado(e: ChangeEvent<HTMLInputElement>) {
+
     setUsuario({
       ...usuario,
       [e.target.name]: e.target.value
