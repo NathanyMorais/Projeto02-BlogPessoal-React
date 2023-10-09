@@ -1,6 +1,9 @@
-import React from 'react';
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
 import './App.css';
-
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -17,11 +20,13 @@ import DeletarPostagem from './components/postagens/deletarPostagem/DeletarPosta
 import Perfil from './paginas/perfil/Perfil';
 
 function App() {
+  
   return (
     <>
-    <AuthProvider>
+      <AuthProvider>
+      <ToastContainer />
         <BrowserRouter>
-          <Navbar />
+        <Navbar />
           <div className='min-h-[80vh]'>
             <Routes>
               <Route path="/" element={<Login />} />
@@ -41,8 +46,9 @@ function App() {
           </div>
           <Footer />
         </BrowserRouter>
-        </AuthProvider>
+      </AuthProvider>
     </>
   );
 }
+
 export default App;
