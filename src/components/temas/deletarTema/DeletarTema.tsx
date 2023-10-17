@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router'
 import { AuthContext } from '../../../contexts/AuthContext'
 import Tema from '../../../models/Tema'
 import { buscar, deletar } from '../../../services/Service'
-import { toastAlerta } from '../../../utils/ToastAlerta'
+import { toastAlerta } from '../../../utils/toastAlerta'
 
 function DeletarTema() {
     const [tema, setTema] = useState<Tema>({} as Tema)
